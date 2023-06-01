@@ -34,6 +34,15 @@
       // fetch wrapper.
 
       // Use WAF token to access protected resources
+      console.log("waf token", wafToken);
+      AwsWafIntegration.fetch(
+        "https://rgyqtimyxd.execute-api.ap-southeast-1.amazonaws.com/search-beta/api/demo",
+        {
+          method: "GET",
+        }
+      )
+        .then((e) => console.log("fetch ok"))
+        .catch((e) => console.log("fetch fail"));
       console.log("captcha success");
     }
 
